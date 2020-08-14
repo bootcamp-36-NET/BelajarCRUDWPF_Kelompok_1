@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BelajarCRUDWPF"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d">
     <Grid Margin="0" Background="White">
-        <Label VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" Foreground="Black">CRUD</Label>
-        <Grid  Height="260" Width="800" Margin="0,41,0,0" VerticalAlignment="Top">
+        <Grid  Height="260" Width="800" Margin="0,21,0,0" VerticalAlignment="Top">
             <Border BorderThickness="3" CornerRadius="10" BorderBrush="LightGray" Background="white">
                 <Grid Margin="5">
                     <Label VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Foreground="Black">SUPPLIER DATA</Label>
@@ -22,6 +22,8 @@
                             Binding="{Binding Id}"/>
                             <DataGridTextColumn Header="Name"
                             Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Join Date"
+                            Binding="{Binding JoinDate, StringFormat='dd/MM/yyyy'}"/>
                             <DataGridTemplateColumn Header="Delete">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -36,19 +38,19 @@
                 </Grid>
             </Border>
         </Grid>
-        <Grid Width="800" Height="200" VerticalAlignment="Bottom" Margin="0 0 0 30">
+        <Grid Width="800" Height="190" VerticalAlignment="Bottom" Margin="0 0 0 20">
             <Border BorderThickness="3" CornerRadius="10" BorderBrush="LightGray" Background="white">
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
                     <Label x:Name="lblId" Content="Id :" HorizontalAlignment="Left" Margin="63,20,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="24" Margin="116,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" IsEnabled="False" TextChanged="TxtId_TextChanged" Foreground="Black"/>
 
                     <Label x:Name="LblName" Content="Nama :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,50,0,0"/>
                     <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="116,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"   TextChanged="TxtName_TextChanged" Foreground="Black"/>
-                    <Label x:Name="lblNameStatus" Content="" HorizontalAlignment="Left" Margin="75,75,0,0" VerticalAlignment="Top" Width="287" Foreground="Red"/>
 
+                    <Label x:Name="lblJoinDate" Content="Join Date" HorizontalAlignment="Left" Margin="270,20,0,0" VerticalAlignment="Top"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="350,20,0,0" VerticalAlignment="Top" x:Name="dtpckrJoinDate" Foreground="Black" SelectedDateChanged="DtpckrJoinDate_SelectedDateChanged"/>
+
+                    <Label x:Name="lblNameStatus" Content="" HorizontalAlignment="Left" Margin="65,75,0,0" VerticalAlignment="Top" Width="287" Foreground="Red"/>
                     <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="63,110,0,0" VerticalAlignment="Top" Width="85" Click="InsertBtn_Click" RenderTransformOrigin="0.283,-2.99"/>
                     <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="170,110,0,0" VerticalAlignment="Top" Width="75" Click="BtnClear_Click" RenderTransformOrigin="-0.251,2.427"/>
                 </Grid>

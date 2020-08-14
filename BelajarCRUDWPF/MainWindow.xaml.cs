@@ -42,11 +42,11 @@ namespace BelajarCRUDWPF
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
-                case "ItemHome":
+                case "itmManager":
                     usc = new SupplierManager();
                     GridMain.Children.Add(usc);
                     break;
-                case "ItemCreate":
+                case "itmAbout":
                     usc = new About();
                     GridMain.Children.Add(usc);
                     break;

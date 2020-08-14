@@ -79,6 +79,15 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008141338369_addItem.cs" />
+    <Compile Include="Migrations\202008141338369_addItem.designer.cs">
+      <DependentUpon>202008141338369_addItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008141343477_addSupplierCascade.cs" />
+    <Compile Include="Migrations\202008141343477_addSupplierCascade.designer.cs">
+      <DependentUpon>202008141343477_addSupplierCascade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Item.cs" />
     <Compile Include="SupplierManager.xaml.cs">
       <DependentUpon>SupplierManager.xaml</DependentUpon>
     </Compile>
@@ -126,6 +135,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\202008130243232_initTable.resx">
       <DependentUpon>202008130243232_initTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008141338369_addItem.resx">
+      <DependentUpon>202008141338369_addItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008141343477_addSupplierCascade.resx">
+      <DependentUpon>202008141343477_addSupplierCascade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

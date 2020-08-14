@@ -37,36 +37,13 @@ namespace BelajarCRUDWPF
             txtName.Text = "";
             lblNameStatus.Content = "";
             txtSearch.Text = "";
+            dtpckrJoinDate.SelectedDate = null;
 
             dataGridSupplier.SelectedItem = null;
             dataGridSupplier.ItemsSource = myContext.Suppliers.ToList();
         }
 
-        private void InsertBtn_Click(object sender, RoutedEventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(txtId.Text))
-            {
-                var existingSupplier = myContext.Suppliers.Find(Convert.ToInt32(txtId.Text));
-                existingSupplier.Name = txtName.Text;
-                myContext.SaveChanges();
-                MessageBox.Show("Data has beed Updated !");
-            }
-            else
-            {
-                var supplier = new Supplier()
-                {
-                    Name = txtName.Text
-                };
-
-                myContext.Suppliers.Add(supplier);
-                myContext.SaveChanges();
-                MessageBox.Show("Data has beed Added !");
-            }
-
-            Reset();
-        }
-
-        private void TxtName_TextChanged(object sender, TextChangedEventArgs e)
+        public void ErrorCheck()
         {
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
@@ -79,11 +56,48 @@ namespace BelajarCRUDWPF
                 lblNameStatus.Content = "Name Must Contain only number and text and . !";
                 btnInsert.IsEnabled = false;
             }
+            else if (dtpckrJoinDate.SelectedDate == null)
+            {
+                lblNameStatus.Content = "Join Date Cannot be empty !";
+                btnInsert.IsEnabled = false;
+            }
             else
             {
                 lblNameStatus.Content = "";
                 btnInsert.IsEnabled = true;
             }
+        }
+
+        private void InsertBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //var test = dtpckrJoinDate.SelectedDate;
+            if (!string.IsNullOrWhiteSpace(txtId.Text))
+            {
+                var existingSupplier = myContext.Suppliers.Find(Convert.ToInt32(txtId.Text));
+                existingSupplier.Name = txtName.Text;
+                existingSupplier.JoinDate = dtpckrJoinDate.SelectedDate.Value;
+                myContext.SaveChanges();
+                MessageBox.Show("Data has beed Updated !");
+            }
+            else
+            {
+                var supplier = new Supplier()
+                {
+                    Name = txtName.Text,
+                    JoinDate = dtpckrJoinDate.SelectedDate.Value
+                };
+
+                myContext.Suppliers.Add(supplier);
+                myContext.SaveChanges();
+                MessageBox.Show("Data has beed Added !");
+            }
+
+            Reset();
+        }
+
+        private void TxtName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ErrorCheck();
         }
 
         private void TxtId_TextChanged(object sender, TextChangedEventArgs e)
@@ -105,6 +119,7 @@ namespace BelajarCRUDWPF
                 var item = dataGridSupplier.SelectedItem as Supplier;
                 txtId.Text = Convert.ToString(item.Id);
                 txtName.Text = item.Name;
+                dtpckrJoinDate.SelectedDate = item.JoinDate;
             }
         }
 
@@ -151,6 +166,11 @@ namespace BelajarCRUDWPF
         {
             var filteredData = myContext.Suppliers.Where(Q => Q.Id.ToString().Contains(txtSearch.Text) || Q.Name.Contains(txtSearch.Text)).ToList();
             dataGridSupplier.ItemsSource = filteredData;
+        }
+
+        private void DtpckrJoinDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ErrorCheck();
         }
     }
 }

@@ -71,13 +71,13 @@
                     <Image Height="80" VerticalAlignment="Bottom"/>
                 </Grid>
                 <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                    <ListViewItem x:Name="ItemHome" Height="60">
+                    <ListViewItem x:Name="itmManager" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
                             <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemCreate" Height="60">
+                    <ListViewItem x:Name="itmAbout" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="About" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
                             <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
