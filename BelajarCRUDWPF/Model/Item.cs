@@ -19,5 +19,8 @@ namespace BelajarCRUDWPF.Model
 
         public int SupplierId { get; set; }
         public Supplier Supplier { get; set; }
+
+        public ICollection<TransactionItem> TransactionItems { get; set; }
+
     }
 }

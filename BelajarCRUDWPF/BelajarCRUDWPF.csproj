@@ -57,6 +57,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,15 +80,14 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008141338369_addItem.cs" />
-    <Compile Include="Migrations\202008141338369_addItem.designer.cs">
-      <DependentUpon>202008141338369_addItem.cs</DependentUpon>
+    <Compile Include="Migrations\202008141734362_Init.cs" />
+    <Compile Include="Migrations\202008141734362_Init.designer.cs">
+      <DependentUpon>202008141734362_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202008141343477_addSupplierCascade.cs" />
-    <Compile Include="Migrations\202008141343477_addSupplierCascade.designer.cs">
-      <DependentUpon>202008141343477_addSupplierCascade.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\TransactionItem.cs" />
     <Compile Include="SupplierManager.xaml.cs">
       <DependentUpon>SupplierManager.xaml</DependentUpon>
     </Compile>
@@ -104,11 +104,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Context\MyContext.cs" />
-    <Compile Include="Migrations\202008130243232_initTable.cs" />
-    <Compile Include="Migrations\202008130243232_initTable.designer.cs">
-      <DependentUpon>202008130243232_initTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Supplier.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -133,14 +128,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202008130243232_initTable.resx">
-      <DependentUpon>202008130243232_initTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008141338369_addItem.resx">
-      <DependentUpon>202008141338369_addItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008141343477_addSupplierCascade.resx">
-      <DependentUpon>202008141343477_addSupplierCascade.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008141734362_Init.resx">
+      <DependentUpon>202008141734362_Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\1200px-Color_icon_blue.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

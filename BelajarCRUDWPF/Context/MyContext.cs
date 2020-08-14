@@ -28,6 +28,23 @@ namespace BelajarCRUDWPF.Context
                 .WithRequired(i => i.Supplier)
                 .HasForeignKey<int>(i => i.SupplierId)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<TransactionItem>()
+               .HasRequired<Transaction>(ti => ti.Transaction)
+               .WithMany(ti => ti.TransactionItem).HasForeignKey<int>(t => t.TransactionId);
+
+            modelBuilder.Entity<Transaction>()
+                .HasMany<TransactionItem>(t => t.TransactionItem)
+                .WithRequired(ti => ti.Transaction)
+                .HasForeignKey<int>(ti => ti.TransactionId)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Item>()
+                .HasMany<TransactionItem>(i => i.TransactionItems)
+                .WithRequired(ti => ti.Item)
+                .HasForeignKey<int>(ti => ti.ItemId)
+                .WillCascadeOnDelete();
+
         }
     }
 }
