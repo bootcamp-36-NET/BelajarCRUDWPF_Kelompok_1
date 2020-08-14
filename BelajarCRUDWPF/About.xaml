@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="BelajarCRUDWPF.About"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BelajarCRUDWPF"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Background="White">
+    <Grid>
+        <dragablz:TabablzControl>
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController/>
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="ABOUT">
+                <TextBlock Text="ABOUT" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </TabItem>
+            <TabItem Header="SOURCE">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Center" Margin="0 10 0 0">
+                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://github.com/Abel13/TabMenu2">
+                            <TextBlock>https://github.com/Abel13/TabMenu2</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0 30 0 0">
+                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://github.com/Abel13/NavigationDrawer">
+                            <TextBlock>https://github.com/Abel13/NavigationDrawer</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Margin="0 50 0 0">
+                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://stackoverflow.com/questions/531621/how-to-make-a-simple-hyperlink-in-xaml/1252560">
+                            <TextBlock>https://stackoverflow.com/questions/531621/how-to-make-a-simple-hyperlink-in-xaml/1252560</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="HELP">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Image/1200px-Color_icon_blue.svg.png"/>
+                    </Grid.Background>
+                    <TextBlock Text="Ask for any question!" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+        </dragablz:TabablzControl>
+    </Grid>
+</UserControl>
