@@ -46,7 +46,6 @@ namespace BelajarCRUDWPF.Context
                 .WithRequired(ti => ti.Item)
                 .HasForeignKey<int>(ti => ti.ItemId)
                 .WillCascadeOnDelete();
-
         }
     }
 }

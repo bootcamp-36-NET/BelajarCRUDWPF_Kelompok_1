@@ -79,8 +79,19 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008141734362_Init.cs" />
+    <Compile Include="Migrations\202008141734362_Init.designer.cs">
+      <DependentUpon>202008141734362_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\TransactionItem.cs" />
     <Compile Include="SupplierManager.xaml.cs">
       <DependentUpon>SupplierManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManager.xaml.cs">
+      <DependentUpon>TransactionManager.xaml</DependentUpon>
     </Compile>
     <Page Include="About.xaml">
       <SubType>Designer</SubType>
@@ -95,11 +106,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Context\MyContext.cs" />
-    <Compile Include="Migrations\202008130243232_initTable.cs" />
-    <Compile Include="Migrations\202008130243232_initTable.designer.cs">
-      <DependentUpon>202008130243232_initTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Supplier.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -108,6 +114,10 @@
     <Page Include="SupplierManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransactionManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -124,8 +134,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202008130243232_initTable.resx">
-      <DependentUpon>202008130243232_initTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008141734362_Init.resx">
+      <DependentUpon>202008141734362_Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
