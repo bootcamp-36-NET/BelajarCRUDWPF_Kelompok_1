@@ -90,7 +90,7 @@ namespace BelajarCRUDWPF
 
         private void TxtSearchTransaction_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var filteredData = mycontext.Transactions.Where(Q => Q.Id.ToString().Contains(txtSearchTransaction.Text));
+            var filteredData = mycontext.Transactions.Where(Q => Q.Id.ToString().Contains(txtSearchTransaction.Text) || Q.OrderDate.ToString().Contains(txtSearchTransaction.Text)).ToList();
             dataGridTransaction.ItemsSource = filteredData;
         }
 
@@ -112,7 +112,7 @@ namespace BelajarCRUDWPF
 
         private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
-            var filteredData = mycontext.Transactions.Where(Q => Q.Id.ToString().Contains(txtSearchTransaction.Text));
+            var filteredData = mycontext.Transactions.Where(Q => Q.Id.ToString().Contains(txtSearchTransaction.Text) || Q.OrderDate.ToString().Contains(txtSearchTransaction.Text)).ToList();
             dataGridTransaction.ItemsSource = filteredData;
         }
 
