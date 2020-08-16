@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="BelajarCRUDWPF.TransactionManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BelajarCRUDWPF"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       
+             mc:Ignorable="d" 
+             d:DesignHeight="423.714" d:DesignWidth="844.068">
+    <Grid Margin="0" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="581*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid  Height="260" Width="800" Margin="21,45,21,0" VerticalAlignment="Top">
+            <Border BorderThickness="3" CornerRadius="10" BorderBrush="LightGray" Background="white">
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="201*"/>
+                        <ColumnDefinition Width="191*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Foreground="Black">TRANSACTION DATA</Label>
+                    <TextBox x:Name="txtSearchTransaction" HorizontalAlignment="Left" Height="24" Margin="132,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"  Foreground="Black" FontSize="13" TextChanged="TxtSearchTransaction_TextChanged"/>
+                    <Button x:Name="btnSearch" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="Black" Margin="298,0,0,220" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="12" Height="Auto" Click="BtnSearch_Click">
+                        <materialDesign:PackIcon Kind="Search" Height="20" Width="20" Margin="0"/>
+                    </Button>
+                    <DataGrid x:Name="dataGridTransaction" HorizontalAlignment="Left" Height="210"  VerticalAlignment="Bottom" Width="784" SelectedCellsChanged="dataGridTransaction_SelectedCellsChanged" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" IsReadOnly="True" Grid.ColumnSpan="2" SelectionChanged="dataGridTransaction_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id"
+                            Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Order Date"
+                            Binding="{Binding OrderDate, StringFormat='dd/MM/yyyy'}"/>
+                            <DataGridTemplateColumn Header="Delete">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="btnDelete2" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="20" Width="20" Background="Red" BorderBrush="{x:Null}" Click="BtnDelete2_Click">
+                                            <materialDesign:PackIcon Kind="Trash"  Height="15" Width="15" Margin="0"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Width="800" Height="190" VerticalAlignment="Bottom" Margin="22,0,22,17.504">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="269*"/>
+                <ColumnDefinition Width="131*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="3" CornerRadius="10" BorderBrush="LightGray" Background="white" Grid.ColumnSpan="2" Margin="0,0,0,2" Height="188" VerticalAlignment="Bottom">
+                <Grid>
+                    <Label x:Name="lblId" Content="Id :" HorizontalAlignment="Left" Margin="63,20,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtIdTransaction" HorizontalAlignment="Left" Height="24" Margin="139,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" IsEnabled="False" TextChanged="TxtIdTransaction_TextChanged" Foreground="Black"/>
+
+                    <Label x:Name="lblOrderDate" Content="Order Date" HorizontalAlignment="Left" Margin="63,57,0,0" VerticalAlignment="Top"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="140,51,0,0" VerticalAlignment="Top" x:Name="dtpckrOrderDate" Foreground="Black" SelectedDateChanged="DtpckrOrderDate_SelectedDateChanged"/>
+
+                    <Label x:Name="lblNameStatus" Content="" HorizontalAlignment="Left" Margin="65,75,0,0" VerticalAlignment="Top" Width="287" Foreground="Red"/>
+                    <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="63,110,0,0" VerticalAlignment="Top" Width="85" Click="InsertBtn_Click" RenderTransformOrigin="0.283,-2.99"/>
+                    <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="170,110,0,0" VerticalAlignment="Top" Width="75" Click="BtnClear_Click" RenderTransformOrigin="-0.251,2.427"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Label Content="TRANSACTION" HorizontalAlignment="Left" Margin="352,5,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="16"/>
+    </Grid>
+</UserControl>
