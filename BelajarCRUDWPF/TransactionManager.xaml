@@ -22,9 +22,6 @@
                     </Grid.ColumnDefinitions>
                     <Label VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Foreground="Black">TRANSACTION DATA</Label>
                     <TextBox x:Name="txtSearchTransaction" HorizontalAlignment="Left" Height="24" Margin="132,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"  Foreground="Black" FontSize="13" TextChanged="TxtSearchTransaction_TextChanged"/>
-                    <Button x:Name="btnSearch" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="Black" Margin="298,0,0,220" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="12" Height="Auto" Click="BtnSearch_Click">
-                        <materialDesign:PackIcon Kind="Search" Height="20" Width="20" Margin="0"/>
-                    </Button>
                     <DataGrid x:Name="dataGridTransaction" HorizontalAlignment="Left" Height="210"  VerticalAlignment="Bottom" Width="784" SelectedCellsChanged="dataGridTransaction_SelectedCellsChanged" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" IsReadOnly="True" Grid.ColumnSpan="2" SelectionChanged="dataGridTransaction_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id"
