@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,7 +16,5 @@ namespace BelajarCRUDWPF.Model
         public DateTime OrderDate { get; set; }
 
         public ICollection<TransactionItem> TransactionItem { get; set; }
-
-
     }
 }

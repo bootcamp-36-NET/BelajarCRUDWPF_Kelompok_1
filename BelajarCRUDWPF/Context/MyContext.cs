@@ -1,4 +1,4 @@
-﻿using BelajarCRUDWPF.Model;
+using BelajarCRUDWPF.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,6 +12,8 @@ namespace BelajarCRUDWPF.Context
     {
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<TransactionItem> TransactionItems { get; set; }
 
         public MyContext() : base("BelajarCRUDWPF")
         {
@@ -44,7 +46,6 @@ namespace BelajarCRUDWPF.Context
                 .WithRequired(ti => ti.Item)
                 .HasForeignKey<int>(ti => ti.ItemId)
                 .WillCascadeOnDelete();
-
         }
     }
 }

@@ -91,6 +91,9 @@
     <Compile Include="SupplierManager.xaml.cs">
       <DependentUpon>SupplierManager.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TransactionManager.xaml.cs">
+      <DependentUpon>TransactionManager.xaml</DependentUpon>
+    </Compile>
     <Page Include="About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +115,10 @@
     <Page Include="SupplierManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransactionManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
