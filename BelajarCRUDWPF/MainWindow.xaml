@@ -45,7 +45,7 @@
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#ffb600">Supplier Manager</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#ffb600" FontFamily="Segoe UI Black">Tugas Kelompok 1</TextBlock>
         </Grid>
         <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
             <Grid.Effect>
@@ -73,16 +73,32 @@
                 <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="itmManager" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <materialDesign:PackIcon Kind="People" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
+                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="itmAbout" Height="60">
+                    
+                    <ListViewItem x:Name="itmTansaction" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="About" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Create" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <materialDesign:PackIcon Kind="Money" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
+                            <TextBlock Text="Transaction" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
                         </StackPanel>
                     </ListViewItem>
+
+                    <ListViewItem x:Name="itmItem" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
+                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="itmTransactionItem" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
+                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    
                 </ListView>
             </StackPanel>
         </Grid>
