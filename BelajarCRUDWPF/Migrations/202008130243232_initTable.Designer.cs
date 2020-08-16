@@ -7,13 +7,13 @@ namespace BelajarCRUDWPF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Init : IMigrationMetadata
+    public sealed partial class initTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202008141734362_Init"; }
+            get { return "202008130243232_initTable"; }
         }
         
         string IMigrationMetadata.Source
