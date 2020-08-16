@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 
 namespace BelajarCRUDWPF.Model
 {
-    [Table("tb_m_supplier")]
-    class Supplier
+    [Table("transaction_item")]
+    class TransactionItem
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTime JoinDate { get; set; }
+        public int Quantity { get; set; }
 
-        public ICollection<Item> Item { get; set; }
+        public int TransactionId { get; set; }
+        public Transaction Transaction { get; set; }
 
+        public int ItemId { get; set; }
+        public Item Item { get; set; }
     }
 }
