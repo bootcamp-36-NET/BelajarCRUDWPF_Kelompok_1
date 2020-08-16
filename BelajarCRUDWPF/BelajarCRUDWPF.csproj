@@ -80,6 +80,9 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ItemManager.xaml.cs">
+      <DependentUpon>ItemManager.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202008141734362_Init.cs" />
     <Compile Include="Migrations\202008141734362_Init.designer.cs">
       <DependentUpon>202008141734362_Init.cs</DependentUpon>
@@ -95,6 +98,10 @@
       <DependentUpon>TransactionManager.xaml</DependentUpon>
     </Compile>
     <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

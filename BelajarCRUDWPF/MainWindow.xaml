@@ -88,9 +88,10 @@
                     <ListViewItem x:Name="itmItem" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <TextBlock Text="Item" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
                         </StackPanel>
                     </ListViewItem>
+                    
                     <ListViewItem x:Name="itmTransactionItem" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
