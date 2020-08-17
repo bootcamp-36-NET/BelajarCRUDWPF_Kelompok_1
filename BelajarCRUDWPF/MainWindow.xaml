@@ -29,12 +29,13 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#FFDEDEDE">
-        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010">
+        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010" Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <Label Content="WELCOME!" HorizontalAlignment="Left" Margin="386,206,0,0" VerticalAlignment="Top" Foreground="#FF233138" FontFamily="Segoe UI Black" FontSize="36"/>
         </Grid>
-        <Grid Height="60" VerticalAlignment="Top" Background="#37474f">
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF233138">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#283551"/>
             </Grid.Effect>
@@ -45,9 +46,9 @@
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#ffb600" FontFamily="Segoe UI Black">Tugas Kelompok 1</TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#ffb600" FontFamily="Segoe UI Black" Margin="449,16,433,16">Tugas Kelompok 1</TextBlock>
         </Grid>
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid x:Name="GridMenu" Width="65" HorizontalAlignment="Left" Background="#FF31577E">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
@@ -74,28 +75,28 @@
                     <ListViewItem x:Name="itmManager" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="People" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600" FontWeight="Bold"/>
                         </StackPanel>
                     </ListViewItem>
                     
                     <ListViewItem x:Name="itmTansaction" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Money" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Transaction" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <TextBlock Text="Transaction" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600" FontWeight="Bold"/>
                         </StackPanel>
                     </ListViewItem>
 
                     <ListViewItem x:Name="itmItem" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Item" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <TextBlock Text="Item" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600" FontWeight="Bold"/>
                         </StackPanel>
                     </ListViewItem>
                     
-                    <ListViewItem x:Name="itmTransactionItem" Height="60">
+                    <ListViewItem x:Name="itmTransactionItem2" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Table" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
-                            <TextBlock Text="Supplier" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600"/>
+                            <materialDesign:PackIcon Kind="TableCheck" Height="25" Width="25" Margin="10" Foreground="#ffb600"/>
+                            <TextBlock Text="Transaction Item" VerticalAlignment="Center" Margin="20 10" Foreground="#ffb600" FontWeight="Bold"/>
                         </StackPanel>
                     </ListViewItem>
                     

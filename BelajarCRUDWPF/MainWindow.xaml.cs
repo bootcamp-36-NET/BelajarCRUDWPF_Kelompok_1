@@ -54,8 +54,8 @@ namespace BelajarCRUDWPF
                     usc = new ItemManager();
                     GridMain.Children.Add(usc);
                     break;
-                case "itmTansactionItem":
-                    usc = new TransactionManager();
+                case "itmTransactionItem2":
+                    usc = new TransactionItemManager();
                     GridMain.Children.Add(usc);
                     break;
 
