@@ -13,7 +13,7 @@
             <RowDefinition Height="581*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Grid  Height="260" Width="800" Margin="21,45,21,0" VerticalAlignment="Top">
+        <Grid  Height="260" Width="800" Margin="21,21,21,0" VerticalAlignment="Top">
             <Border BorderThickness="3" CornerRadius="10" BorderBrush="LightGray" Background="white">
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
@@ -61,6 +61,5 @@
                 </Grid>
             </Border>
         </Grid>
-        <Label Content="TRANSACTION" HorizontalAlignment="Left" Margin="352,5,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="16"/>
     </Grid>
 </UserControl>
