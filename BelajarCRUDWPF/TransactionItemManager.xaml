@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:BelajarCRUDWPF"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Margin="0,0,-529,0" Background="White">
+             d:DesignHeight="300" d:DesignWidth="815.957">
+    <Grid Margin="0" Background="White">
         <Grid  Height="260" Width="800" Margin="0,21,0,0" VerticalAlignment="Top">
             <Border BorderThickness="3" CornerRadius="10" BorderBrush="LightGray" Background="white">
                 <Grid Margin="5">
@@ -47,10 +47,10 @@
                     <TextBox x:Name="txtQuantity" HorizontalAlignment="Left" Height="29" Margin="116,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"   TextChanged="TxtName_TextChanged" Foreground="Black"/>
 
                     <Label x:Name="LblSTransactionId" Content="TransactionId :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="308,20,0,0"/>
-                    <ComboBox x:Name="cmbxTransactionId" HorizontalAlignment="Left" Margin="403,15,0,0" VerticalAlignment="Top" Width="150" DataContextChanged="cmbxTransactionId_DataContextChanged" Foreground="Black" Text="--SELECT--" IsReadOnly="true" IsEditable="True" SelectionChanged="cmbxTransactionId_SelectionChanged"/>
+                    <ComboBox x:Name="cmbxTransactionId" HorizontalAlignment="Left" Margin="403,15,0,0" VerticalAlignment="Top" Width="150" Foreground="Black" Text="--SELECT--" IsReadOnly="true" IsEditable="True" SelectionChanged="cmbxTransactionId_SelectionChanged"/>
 
                     <Label x:Name="LblItemId" Content="ItemId            :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="308,59,0,0"/>
-                    <ComboBox x:Name="cmbxItemId" HorizontalAlignment="Left" Margin="403,60,0,0" VerticalAlignment="Top" Width="150" DataContextChanged="cmbxItemId_DataContextChanged" Foreground="Black" Text="--SELECT--" IsReadOnly="true" IsEditable="True"/>
+                    <ComboBox x:Name="cmbxItemId" HorizontalAlignment="Left" Margin="403,60,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="cmbxTransactionId_SelectionChanged" Foreground="Black" Text="--SELECT--" IsReadOnly="true" IsEditable="True"/>
 
                     <Label x:Name="lblNameStatus" Content="" HorizontalAlignment="Left" Margin="65,75,0,0" VerticalAlignment="Top" Width="287" Foreground="Red"/>
                     <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="63,110,0,0" VerticalAlignment="Top" Width="85" Click="InsertBtn_Click" RenderTransformOrigin="0.283,-2.99"/>

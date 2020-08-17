@@ -60,11 +60,25 @@ namespace BelajarCRUDWPF
                 lblNameStatus.Content = "Stock Must be Numeric !";
                 btnInsert.IsEnabled = false;
             }
+
+         
             //else if ()
             //{
             //    lblNameStatus.Content = "Join Date Cannot be empty !";
             //    btnInsert.IsEnabled = false;
             //}
+            else if (cmbxTransactionId.SelectedItem == null)
+            {
+                lblNameStatus.Content = "Transaction Id do not empty";
+                btnInsert.IsEnabled = true;
+            }
+
+            else if (cmbxItemId.SelectedItem == null)
+            {
+                lblNameStatus.Content = "Item Id do not empty";
+                btnInsert.IsEnabled = true;
+            }
+
             else
             {
                 lblNameStatus.Content = "";
@@ -175,12 +189,12 @@ namespace BelajarCRUDWPF
             Reset();
         }
 
-        private void cmbxTransactionId_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void cmbxTransactionId_SelectionChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             ErrorCheck();
         }
 
-        private void cmbxItemId_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void cmbxItemId_SelectionChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             ErrorCheck();
         }
