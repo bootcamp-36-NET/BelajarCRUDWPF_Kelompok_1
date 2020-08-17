@@ -58,7 +58,7 @@
                     <TextBox x:Name="txtStock" HorizontalAlignment="Left" Height="23" Margin="306,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"   TextChanged="TxtStock_TextChanged" Foreground="Black"/>
 
                     <Label x:Name="LblSupplierId" Content="SupplierId :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="437,20,0,0"/>
-                    <ComboBox x:Name="cmbxSupplierId" HorizontalAlignment="Left" Margin="520,15,0,0" VerticalAlignment="Top" Width="150" DataContextChanged="CmbxSupplierId_DataContextChanged" Foreground="Black" Text="--SELECT--" IsReadOnly="true" IsEditable="True"/>
+                    <ComboBox x:Name="cmbxSupplierId" HorizontalAlignment="Left" Margin="520,15,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="CmbxSupplierId_SelectionChanged" Foreground="Black" Text="--SELECT--" IsReadOnly="true" IsEditable="True"/>
 
                     <Label x:Name="lblNameStatus" Content="" HorizontalAlignment="Left" Margin="65,75,0,0" VerticalAlignment="Top" Width="287" Foreground="Red"/>
                     <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="63,110,0,0" VerticalAlignment="Top" Width="85" Click="InsertBtn_Click" RenderTransformOrigin="0.283,-2.99"/>
