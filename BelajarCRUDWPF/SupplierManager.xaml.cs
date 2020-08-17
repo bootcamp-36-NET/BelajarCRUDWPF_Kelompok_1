@@ -35,11 +35,11 @@ namespace BelajarCRUDWPF
         {
             txtId.Text = "";
             txtName.Text = "";
-            lblNameStatus.Content = "";
             txtSearch.Text = "";
             dtpckrJoinDate.SelectedDate = null;
 
             dataGridSupplier.SelectedItem = null;
+            lblNameStatus.Content = "";
             dataGridSupplier.ItemsSource = myContext.Suppliers.ToList();
         }
 
