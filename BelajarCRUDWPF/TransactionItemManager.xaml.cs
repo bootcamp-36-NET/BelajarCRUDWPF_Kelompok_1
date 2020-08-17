@@ -39,12 +39,12 @@ namespace BelajarCRUDWPF
         {
             txtId.Text = "";
             txtQuantity.Text = "";
-            lblNameStatus.Content = "";
             txtSearch.Text = "";
             cmbxTransactionId.SelectedItem = null;
             cmbxItemId.SelectedItem = null;
 
             dataGridTransactionItem.SelectedItem = null;
+            lblNameStatus.Content = "";
             dataGridTransactionItem.ItemsSource = myContext.TransactionItems.ToList();
         }
 
@@ -61,12 +61,6 @@ namespace BelajarCRUDWPF
                 btnInsert.IsEnabled = false;
             }
 
-         
-            //else if ()
-            //{
-            //    lblNameStatus.Content = "Join Date Cannot be empty !";
-            //    btnInsert.IsEnabled = false;
-            //}
             else if (cmbxTransactionId.SelectedItem == null)
             {
                 lblNameStatus.Content = "Transaction Id do not empty";
