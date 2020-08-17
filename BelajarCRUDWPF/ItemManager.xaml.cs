@@ -40,13 +40,13 @@ namespace BelajarCRUDWPF
         {
             txtId.Text = "";
             txtName.Text = "";
-            lblNameStatus.Content = "";
             txtSearch.Text = "";
             txtPrice.Text = "";
             txtStock.Text = "";
             cmbxSupplierId.SelectedItem = null;
 
             dataGridSupplier.SelectedItem = null;
+            lblNameStatus.Content = "";
             dataGridSupplier.ItemsSource = myContext.Items.ToList();
         }
 
@@ -83,11 +83,7 @@ namespace BelajarCRUDWPF
                 lblNameStatus.Content = "Stock Must be Numeric !";
                 btnInsert.IsEnabled = false;
             }
-            //else if ()
-            //{
-            //    lblNameStatus.Content = "Join Date Cannot be empty !";
-            //    btnInsert.IsEnabled = false;
-            //}
+
             else
             {
                 lblNameStatus.Content = "";

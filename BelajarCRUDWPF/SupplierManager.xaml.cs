@@ -35,11 +35,11 @@ namespace BelajarCRUDWPF
         {
             txtId.Text = "";
             txtName.Text = "";
-            lblNameStatus.Content = "";
             txtSearch.Text = "";
             dtpckrJoinDate.SelectedDate = null;
 
             dataGridSupplier.SelectedItem = null;
+            lblNameStatus.Content = "";
             dataGridSupplier.ItemsSource = myContext.Suppliers.ToList();
         }
 
@@ -51,7 +51,7 @@ namespace BelajarCRUDWPF
                 btnInsert.IsEnabled = false;
             }
             else if (!r.IsMatch(txtName.Text))
-            //else if (!txtName.Text.All(char.IsLetterOrDigit))
+        
             {
                 lblNameStatus.Content = "Name Must Contain only number and text and . !";
                 btnInsert.IsEnabled = false;
@@ -70,7 +70,7 @@ namespace BelajarCRUDWPF
 
         private void InsertBtn_Click(object sender, RoutedEventArgs e)
         {
-            //var test = dtpckrJoinDate.SelectedDate;
+            
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
                 var existingSupplier = myContext.Suppliers.Find(Convert.ToInt32(txtId.Text));

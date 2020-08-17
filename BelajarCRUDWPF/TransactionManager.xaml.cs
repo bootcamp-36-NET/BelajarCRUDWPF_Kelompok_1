@@ -36,11 +36,11 @@ namespace BelajarCRUDWPF
         public void Reset()
         {
             txtIdTransaction.Text = "";            
-            lblNameStatus.Content = "";
             txtSearchTransaction.Text = "";
             dtpckrOrderDate.SelectedDate = null;
 
             dataGridTransaction.SelectedItem = null;
+            lblNameStatus.Content = "";
             dataGridTransaction.ItemsSource = mycontext.Transactions.ToList();
         }
 
