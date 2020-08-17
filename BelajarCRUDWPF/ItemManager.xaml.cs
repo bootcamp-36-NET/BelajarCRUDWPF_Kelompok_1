@@ -226,8 +226,7 @@ namespace BelajarCRUDWPF
             ErrorCheck();
         }
 
-
-        private void CmbxSupplierId_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void CmbxSupplierId_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ErrorCheck();
         }
