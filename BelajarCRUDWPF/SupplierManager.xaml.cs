@@ -22,7 +22,7 @@ namespace BelajarCRUDWPF
     {
         MyContext myContext = new MyContext();
 
-        Regex r = new Regex("^[a-zA-Z0-9. ]*$");
+        Regex alphaNumericRegex = new Regex("^[a-zA-Z0-9. ]*$");
 
         public SupplierManager()
         {
@@ -50,7 +50,7 @@ namespace BelajarCRUDWPF
                 lblNameStatus.Content = "Name Cannot Empty !";
                 btnInsert.IsEnabled = false;
             }
-            else if (!r.IsMatch(txtName.Text))
+            else if (!alphaNumericRegex.IsMatch(txtName.Text))
         
             {
                 lblNameStatus.Content = "Name Must Contain only number and text and . !";
