@@ -20,6 +20,7 @@ namespace BelajarCRUDWPF.Model
         public int SupplierId { get; set; }
         public Supplier Supplier { get; set; }
 
+        //One to many antara Item ke transactionItem
         public ICollection<TransactionItem> TransactionItems { get; set; }
 
     }
