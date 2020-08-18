@@ -21,31 +21,33 @@ namespace BelajarCRUDWPF.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-           //Item ke supplier (one to one)
+            //One-to-one Item-to-Supplier
             modelBuilder.Entity<Item>()
                 .HasRequired<Supplier>(S => S.Supplier)
-                .WithMany(S => S.Item).HasForeignKey<int>(I => I.SupplierId);
+                .WithMany(S => S.Item)
+                .HasForeignKey<int>(I => I.SupplierId);
 
-           //item to supplier (one to many)
+            //One-to-many Item-to-Supplier
             modelBuilder.Entity<Supplier>()
                 .HasMany<Item>(s => s.Item)
                 .WithRequired(i => i.Supplier)
                 .HasForeignKey<int>(i => i.SupplierId)
                 .WillCascadeOnDelete();
 
-            //TransactionItem ke Transaction (one to one)
+            //One-to-one TransactionItem-to-Transaction
             modelBuilder.Entity<TransactionItem>()
                .HasRequired<Transaction>(ti => ti.Transaction)
-               .WithMany(ti => ti.TransactionItem).HasForeignKey<int>(t => t.TransactionId);
-           
-           //Transaction ke TransactionItem (one to many)
+               .WithMany(t => t.TransactionItem)
+               .HasForeignKey<int>(t => t.TransactionId);
+
+            //One-to-many Transaction-to-TransactionItem
             modelBuilder.Entity<Transaction>()
                 .HasMany<TransactionItem>(t => t.TransactionItem)
                 .WithRequired(ti => ti.Transaction)
                 .HasForeignKey<int>(ti => ti.TransactionId)
                 .WillCascadeOnDelete();
 
-            //Item ke TransactionItem (one to many)
+            //One-to-many Item-to-TransactionItem
             modelBuilder.Entity<Item>()
                 .HasMany<TransactionItem>(i => i.TransactionItems)
                 .WithRequired(ti => ti.Item)
