@@ -47,7 +47,7 @@
                     <Label x:Name="LblName" Content="Nama :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="63,50,0,0"/>
                     <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="116,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"   TextChanged="TxtName_TextChanged" Foreground="Black"/>
 
-                    <Label x:Name="lblJoinDate" Content="Join Date" HorizontalAlignment="Left" Margin="270,20,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblJoinDate" Content="Join Date :" HorizontalAlignment="Left" Margin="270,20,0,0" VerticalAlignment="Top"/>
                     <DatePicker HorizontalAlignment="Left" Margin="350,20,0,0" VerticalAlignment="Top" x:Name="dtpckrJoinDate" Foreground="Black" SelectedDateChanged="DtpckrJoinDate_SelectedDateChanged"/>
 
                     <Label x:Name="lblNameStatus" Content="" HorizontalAlignment="Left" Margin="65,75,0,0" VerticalAlignment="Top" Width="287" Foreground="Red"/>

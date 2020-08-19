@@ -32,8 +32,10 @@ namespace BelajarCRUDWPF
         {
             InitializeComponent();
             btnInsert.IsEnabled = false;
-            dataGridSupplier.ItemsSource = myContext.Items.ToList(); 
-            cmbxSupplierId.ItemsSource = myContext.Suppliers.Select(Q => Q.Id).ToList(); ;
+            dataGridSupplier.ItemsSource = myContext.Items.Include("Supplier").ToList();
+            cmbxSupplierId.ItemsSource = myContext.Suppliers.ToList();
+            cmbxSupplierId.DisplayMemberPath = "Name";
+            cmbxSupplierId.SelectedValuePath = "Id";
         }
 
         public void Reset()
@@ -98,7 +100,7 @@ namespace BelajarCRUDWPF
         //UPDATE OR INSERT
         private void InsertBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
                 //UPDATE
@@ -106,7 +108,7 @@ namespace BelajarCRUDWPF
                 existingSupplier.Name = txtName.Text;
                 existingSupplier.Price = Convert.ToInt32(txtPrice.Text);
                 existingSupplier.Stock = Convert.ToInt32(txtStock.Text);
-                existingSupplier.SupplierId = Convert.ToInt32(cmbxSupplierId.SelectedValue);
+                existingSupplier.SupplierId = Convert.ToInt32(cmbxSupplierId.SelectedValue.ToString().Split('-')[0]);
 
                 myContext.SaveChanges();
                 MessageBox.Show("Data has beed Updated !");
@@ -121,6 +123,7 @@ namespace BelajarCRUDWPF
                     Stock = Convert.ToInt32(txtStock.Text),
                     SupplierId = Convert.ToInt32(cmbxSupplierId.SelectedValue)
                 };
+
 
                 myContext.Items.Add(item);
                 myContext.SaveChanges();

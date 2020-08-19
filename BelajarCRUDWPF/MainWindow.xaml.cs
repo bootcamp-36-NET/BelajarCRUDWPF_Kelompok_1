@@ -68,5 +68,12 @@ namespace BelajarCRUDWPF
         {
             System.Windows.Application.Current.Shutdown();
         }
+
+        private void BtnLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            Close();
+            login.Show();
+        }
     }
 }

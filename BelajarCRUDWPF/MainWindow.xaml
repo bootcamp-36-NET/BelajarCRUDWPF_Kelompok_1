@@ -42,6 +42,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                     <StackPanel Width="150">
+                        <Button x:Name="btnLogOut" Content="Log out" Click="BtnLogOut_Click"/>
                         <Button x:Name="btnClose" Content="Close" Click="BtnClose_Click"/>
                     </StackPanel>
                 </materialDesign:PopupBox>

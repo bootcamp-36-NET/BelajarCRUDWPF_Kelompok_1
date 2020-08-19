@@ -172,6 +172,16 @@ namespace BelajarCRUDWPF
         {
             ErrorCheck();
         }
+
+        private void TxtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TxtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
 
